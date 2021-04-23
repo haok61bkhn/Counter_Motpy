@@ -1,3 +1,5 @@
+*.ts
 *.mp4
 *.avi
+*.pt
 __pycache__/*

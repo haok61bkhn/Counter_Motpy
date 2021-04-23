@@ -78,9 +78,11 @@ class PolygonDrawer(object):
 
 if __name__ == "__main__":
     pd = PolygonDrawer("Polygon")
-    url="town.avi"
+    # url="rtsp://admin:CUSTRJ@192.168.100.230:554"
+    url="video.mp4"
     cam=cv2.VideoCapture(url)
-    _,img =cam.read()
+    for i in range(20):
+        _,img =cam.read()
     image = pd.run(img)
     cv2.imwrite("polygon.png", image)
     print("Polygon = %s" % pd.points)

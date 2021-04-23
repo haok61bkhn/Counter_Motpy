@@ -92,7 +92,7 @@ class Tracker:
         self._tracker = get_single_object_tracker(model=self.model, x0=x0)
 
     def predict(self):
-        self.steps_alive += 1
+        self.steps_alive += 0.5
         self._tracker.predict()
 
     def update(self, detection: Detection):
